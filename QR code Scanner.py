@@ -20,9 +20,14 @@ import numpy as np
 import datetime
 
 # Steps 
+
 # 1 Scan QR code using Webcam.
+cam = cv2.VideoCapture(0)
+cam.set(3,640)
+cam.set(4,480)
 
 # 2 Decode QR code.
+
 
 # 3 Check for Date and Time.
 
