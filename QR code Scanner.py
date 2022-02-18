@@ -27,8 +27,10 @@ cam.set(3,640)
 cam.set(4,480)
 
 # 2 Decode QR code.
-
-
+image = cam.read()
+qrCode = decode(image)
+finalData = qrCode.data.decode('utf-8')
+print(finalData)
 # 3 Check for Date and Time.
 
 # 4 Write data into a text file.
