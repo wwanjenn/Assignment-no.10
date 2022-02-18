@@ -14,10 +14,11 @@
 # 	- Your source code should be in github before Feb 19
 # 	- Create a demo of your program (1-2 min) and send it directly to my messenger.
 
+
 import cv2
 from pyzbar import pyzbar
 import numpy as np
-import datetime
+from datetime import datetime
 
 # Steps 
 
@@ -37,5 +38,8 @@ cv2.destroyAllWindows()
 data = pyzbar.decode(qrData)
 
 # 3 Check for Date and Time.
+dateNtime = datetime.now()
+time = dateNtime.strftime("%I:%M %p")
+date = dateNtime.strftime("%B %d, %Y")
 
 # 4 Write data into a text file.
