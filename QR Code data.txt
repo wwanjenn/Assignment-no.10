@@ -6,17 +6,21 @@ Personal Information
     Date of Birth: December 25, 2010
     Sex: Male
     Address: Bosse Kingdom
+    Contact Number: N/A
 
 Vaccination Details
     Fully Vaccinated: Yes(/)     No( )
+    
     1st Dose
         Vaccine: Oxford–AstraZeneca COVID-19 Vaccine
         Vaccination Date: September 21, 2021
         Vaccination Site: Queen Hilling General Hospital, Bosse Kingdom
+
     2nd Dose
         Vaccine: Oxford–AstraZeneca COVID-19 Vaccine
         Vaccination Date: December 6, 2021
         Vaccination Site: Queen Hilling General Hospital, Bosse Kingdom
+
     Boostered: Yes( )     No(/)
         Booster Shot: N/A
         Date: N/A
