@@ -15,7 +15,7 @@
 # 	- Create a demo of your program (1-2 min) and send it directly to my messenger.
 
 import cv2
-from pyzbar.pyzbar import decode
+from pyzbar import pyzbar
 import numpy as np
 import datetime
 
@@ -24,15 +24,18 @@ import datetime
 # 1 Scan QR code using Webcam.
 cam = cv2.VideoCapture(0)
 while True:
-    succes, image = cam.read()
-    
+    _, qrCode = cam.read()
+    qrData = pyzbar.decode(qrCode)
+    cv2.imshow('QR Code Scanner', qrCode)
+    key = cv2.waitKey(1)
+    if key == ord('e'):
+        break
+cam.release()
+cv2.destroyAllWindows()
 
 # 2 Decode QR code.
-    qrCode = decode(image)
-    print(qrCode)
-    cv2.imshow('QR Code Scanner',image)
-    cv2.waitKey(1)
-    
+data = pyzbar.decode(qrData)
+
 # 3 Check for Date and Time.
 
 # 4 Write data into a text file.
