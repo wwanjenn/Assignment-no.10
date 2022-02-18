@@ -23,14 +23,16 @@ import datetime
 
 # 1 Scan QR code using Webcam.
 cam = cv2.VideoCapture(0)
-cam.set(3,640)
-cam.set(4,480)
+while True:
+    succes, image = cam.read()
+    
 
 # 2 Decode QR code.
-image = cam.read()
-qrCode = decode(image)
-finalData = qrCode.data.decode('utf-8')
-print(finalData)
+    qrCode = decode(image)
+    print(qrCode)
+    cv2.imshow('QR Code Scanner',image)
+    cv2.waitKey(1)
+    
 # 3 Check for Date and Time.
 
 # 4 Write data into a text file.
