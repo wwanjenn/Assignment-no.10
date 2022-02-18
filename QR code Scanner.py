@@ -42,4 +42,4 @@ date = dateNtime.strftime("%B %d, %Y")
 
 # 4 Write data into a text file.
 with open('Scanner Result.txt', 'w+') as txt:
-    txt.write(data +  f'\nDate: {date}     Time: {time}')
+    txt.write(data +  f'\n\nDate: {date}     Time: {time}')
