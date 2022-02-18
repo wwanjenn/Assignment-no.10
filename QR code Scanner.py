@@ -30,12 +30,11 @@ while True:
     key = cv2.waitKey(1)
     if key == ord('e'):
         break
-cam.release()
-cv2.destroyAllWindows()
 
 # 2 Decode QR code.
-for qrData in qrCode:
-    data = qrData.data
+    for qrData in decode(qrCode):
+        data = qrData.data.decode('utf-8')
+        print(data)
 # 3 Check for Date and Time.
 dateNtime = datetime.now()
 time = dateNtime.strftime("%I:%M %p")
