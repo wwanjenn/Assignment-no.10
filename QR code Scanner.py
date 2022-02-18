@@ -16,7 +16,7 @@
 
 
 import cv2
-from pyzbar import pyzbar
+from pyzbar.pyzbar import decode
 import numpy as np
 from datetime import datetime
 
@@ -26,7 +26,6 @@ from datetime import datetime
 cam = cv2.VideoCapture(0)
 while True:
     _, qrCode = cam.read()
-    qrData = pyzbar.decode(qrCode)
     cv2.imshow('QR Code Scanner', qrCode)
     key = cv2.waitKey(1)
     if key == ord('e'):
@@ -35,11 +34,12 @@ cam.release()
 cv2.destroyAllWindows()
 
 # 2 Decode QR code.
-data = pyzbar.decode(qrData)
-
+for qrData in qrCode:
+    data = qrData.data
 # 3 Check for Date and Time.
 dateNtime = datetime.now()
 time = dateNtime.strftime("%I:%M %p")
 date = dateNtime.strftime("%B %d, %Y")
 
 # 4 Write data into a text file.
+print(data)
