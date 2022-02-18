@@ -14,8 +14,13 @@
 # 	- Your source code should be in github before Feb 19
 # 	- Create a demo of your program (1-2 min) and send it directly to my messenger.
 
+import cv2
+from pyzbar.pyzbar import decode
+import numpy as np
+import datetime
+
 # Steps 
-# 1 Scan QR code.
+# 1 Scan QR code using Webcam.
 
 # 2 Decode QR code.
 

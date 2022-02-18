@@ -10,14 +10,14 @@ Personal Information
 
 Vaccination Details
     Fully Vaccinated: Yes(/)     No( )
-    
+
     1st Dose
         Vaccine: Oxford–AstraZeneca COVID-19 Vaccine
         Vaccination Date: September 21, 2021
         Vaccination Site: Queen Hilling General Hospital, Bosse Kingdom
 
     2nd Dose
-        Vaccine: Oxford–AstraZeneca COVID-19 Vaccine
+        Vaccine: Oxford-AstraZeneca COVID-19 Vaccine
         Vaccination Date: December 6, 2021
         Vaccination Site: Queen Hilling General Hospital, Bosse Kingdom
 
