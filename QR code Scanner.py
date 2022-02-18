@@ -32,13 +32,14 @@ while True:
         break
 
 # 2 Decode QR code.
-    for qrData in decode(qrCode):
-        data = qrData.data.decode('utf-8')
-        print(data)
+for qrData in decode(qrCode):
+    data = qrData.data.decode('utf-8')
+    
 # 3 Check for Date and Time.
 dateNtime = datetime.now()
 time = dateNtime.strftime("%I:%M %p")
 date = dateNtime.strftime("%B %d, %Y")
 
 # 4 Write data into a text file.
-print(data)
+with open('Scanner Result.txt', 'w+') as txt:
+    txt.write(data +  f'\nDate: {date}     Time: {time}')
