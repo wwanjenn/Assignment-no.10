@@ -27,7 +27,8 @@ cam = cv2.VideoCapture(0)
 while True:
     _, qrCode = cam.read()
     points = np.array([qrCode.polygon], np.int32)
-
+    points = points.reshape(-1,1,2)
+    cv2.polylines(qrCode,points,True,(255,0,0),5)
     cv2.imshow('QR Code Scanner', qrCode)
     key = cv2.waitKey(1)
     if key == ord('e'):
