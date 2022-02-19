@@ -21,7 +21,6 @@ import numpy as np
 from datetime import datetime
 
 # Steps 
-
 # 1 Scan QR code using Webcam.
 cam = cv2.VideoCapture(0)
 while True:
