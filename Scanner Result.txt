@@ -1,4 +1,11 @@
 CONTACT TRACING FORM
 
+Personal Information
+    Name: Prince Bojji
+    Age:  11 years old
+    Date of Birth: December 25, 2010
+    Sex: Male
+    Address: Bosse Kingdom
+    Contact Number: N/A
 
-Date: February 19, 2022     Time: 04:39 PM
+Date: February 19, 2022     Time: 04:42 PM
