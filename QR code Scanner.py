@@ -32,7 +32,9 @@ while True:
         data = qrData.data.decode('utf-8')
         points = np.array([qrData.polygon], np.int32)
         points = points.reshape((1,-1,2))
-        cv2.polylines(qrCode,points,True,(0,0,255),5,-1)
+        cv2.polylines(qrCode,points,True,(0,0,255),3,-1)
+        points2 = qrData.rect
+        cv2.putText(qrCode,'Success',(points2[0],points2[1]),cv2.FONT_HERSHEY_PLAIN,2,(0,0,225),4)
     cv2.imshow('QR Code Scanner', qrCode)
     key = cv2.waitKey(1)
     if key == ord('e'):
