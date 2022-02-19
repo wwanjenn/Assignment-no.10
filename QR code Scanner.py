@@ -26,17 +26,18 @@ from datetime import datetime
 cam = cv2.VideoCapture(0)
 while True:
     _, qrCode = cam.read()
-    points = np.array([qrCode.polygon], np.int32)
-    points = points.reshape(-1,1,2)
-    cv2.polylines(qrCode,points,True,(255,0,0),5)
+    for qrData in decode(qrCode):
+        data = qrData.data.decode('utf-8')
+        points = np.array([qrData.polygon], np.int32)
+        points = points.reshape(-1,1,2)
+        cv2.polylines(qrCode,points,True,(0,0,255),10)
     cv2.imshow('QR Code Scanner', qrCode)
     key = cv2.waitKey(1)
     if key == ord('e'):
         break
 
 # 2 Decode QR code.
-for qrData in decode(qrCode):
-    data = qrData.data.decode('utf-8')
+
     
 # 3 Check for Date and Time.
 dateNtime = datetime.now()
